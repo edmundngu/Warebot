@@ -45,7 +45,7 @@ Warehouse
 
 Rack
 <div align="center">
-    <img src="images/rack.jpg" alt="Rack" width="600">
+    <img src="images/rack.jpg" alt="Rack" width="300">
 </div>
 
 ## Techniques
@@ -54,26 +54,26 @@ Rack
     - To create a map of environment by predicting the real-time location of robot position in arbitary space.
 
 <div align="center">
-    <img src="images/slam_map.jpg" alt="SLAM Map" width="500">
+    <img src="images/slam_map.jpg" alt="SLAM Map" width="300">
 </div>
 
 2. Rviz (ROS Visualization)
 
 <div align="center">
-    <img src="images/rviz_map.png" alt="Rviz Map" width="600">
+    <img src="images/rviz_map.png" alt="Rviz Map" width="300">
 </div>
 
 3. find_object_2d + ArUco
 
 <div align="center">
-    <img src="images/recog1.png" alt="Recog1" width="600">
-    <img src="images/recog2.png" alt="Rviz Map" width="600">
+    <img src="images/recog1.png" alt="Recog1" width="300">
+    <img src="images/recog2.png" alt="Rviz Map" width="300">
 </div>
 
 ## ArUco Location
 
 <div align="center">
-    <img src="images/aruco_map.jpg" alt="ArUco Map" width="500">
+    <img src="images/aruco_map.jpg" alt="ArUco Map" width="300">
 </div>
 
 ## Implementation
