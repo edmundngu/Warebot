@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="recognize" default="true"/>
+
+  <include file="$(find warebot_gazebo)/launch/warebot_warehouse.launch"/>
+
+  <node pkg="warebot" type="warebot_autowork" name="warebot_autowork" output="screen"/>
+
+  <node pkg="find_object_2d" type="find_object_2d" name="find_object_2d">
+    <remap from="image" to="/camera/rgb/image_raw"/>
+    <param if="$(arg recognize)" name="objects_path" value="$(find warebot)/image_rec/"/>
+  </node>
+
+</launch>

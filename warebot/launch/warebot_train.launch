@@ -1,0 +1,23 @@
+<launch>
+
+  <arg name="teach" default="true"/>
+  <arg name="recognize" default="false"/>
+
+  <include file="$(find warebot_gazebo)/launch/warebot_warehouse.launch"/>
+
+  <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"/>
+  
+  <!--teleop_key-->
+  <!--<arg name="model" default="waffle_pi" doc="model type [burger, waffle, waffle_pi]"/>
+  <param name="model" value="$(arg model)"/>
+
+  <node pkg="turtlebot3_teleop" type="turtlebot3_teleop_key" name="turtlebot3_teleop_keyboard"  output="screen">
+  </node>-->
+
+  <node pkg="find_object_2d" type="find_object_2d" name="find_object_2d">
+    <remap from="image" to="/camera/rgb/image_raw"/>
+    <param name="gui" value="$(arg teach)"/>
+    <param if="$(arg recognize)" name="objects_path" value="$(find warebot)/image_rec/"/>
+  </node>
+
+</launch>
